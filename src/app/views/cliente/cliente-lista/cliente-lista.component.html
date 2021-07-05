@@ -1,1 +1,42 @@
-<p>cliente-lista works!</p>
+<div class="row">
+  <div class="col s12">
+    <table>
+      <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th>Sexo</th>
+            <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let cliente of clienteList">
+          <td>{{cliente.codigo}}</td>
+          <td>{{cliente.nome}}</td>
+          <td>{{cliente.cpf}}</td>
+          <td>{{cliente.email}}</td>
+          <td>{{cliente.sexo}}</td>
+          <td>
+            <i (click)="editCliente()" class="pointer material-icons">edit</i>
+            <i (click)="openModal()" class="pointer material-icons red-text">delete</i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div id="modal-confirm-delete" class="modal">
+  <div class="modal-content">
+    <h4>Apagar cliente</h4>
+    <p> tem certeza? </p>
+  </div>
+  <div class="modal-footer">
+    <button class="modal-close waves-effect waves-green btn-flat">voltar</button>
+    <button (click)="deleteCliente()" class="modal-close waves-effect waves-green btn-flat red white-text">apagar</button>
+  </div>
+</div>

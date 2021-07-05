@@ -7,25 +7,38 @@ export class ApiMock {
   // ● POST /clientes/
   // ● PUT /clientes/1
   // ● DELETE /clientes/1
-  static getClientes = [{
-    código: '',
-    cliente: '',
-    nome: '',
-    cpf: '',
-    sexo: '',
-    email: ''
-  },
-  {
-    código: '',
-    cliente: '',
-    nome: '',
-    cpf: '',
-    sexo: '',
-    email: ''
-  }];
+  static getClientes = [
+    {
+      id_cliente: '1',
+      codigo: '001',
+      cliente: 'aaaa',
+      nome: 'aaaa',
+      cpf: '11111111111',
+      sexo: 'M',
+      email: 'aaaa@aaaa.com'
+    },
+    {
+      id_cliente: '2',
+      codigo: '002',
+      cliente: 'bbbb',
+      nome: 'bbbb',
+      cpf: '22222222222',
+      sexo: 'H',
+      email: 'bbbb@bbbb.com'
+    },
+    {
+      id_cliente: '3',
+      codigo: '003',
+      cliente: 'cccc',
+      nome: 'cccc',
+      cpf: '33333333333',
+      sexo: 'H',
+      email: 'cccc@cccc.com'
+    }
+  ];
 
   static getCliente = {
-    código: '',
+    codigo: '',
     cliente: '',
     nome: '',
     cpf: '',
@@ -34,7 +47,7 @@ export class ApiMock {
   }
 
   // PRODUTO
-  // Com os campos: código produto, nome, fabricação (nacional ou
+  // Com os campos: codigo produto, nome, fabricação (nacional ou
   // importado), tamanho, valor.
   // Com os endpoints
   // ● GET /produtos/
@@ -43,7 +56,7 @@ export class ApiMock {
   // ● PUT /produtos/1
   // ● DELETE /produtos/1
   static getProdutos = [{
-    código: '',
+    codigo: '',
     produto: '',
     nome: '',
     fabricacao: '',
@@ -53,7 +66,7 @@ export class ApiMock {
     valor: '',
   },
   {
-    código: '',
+    codigo: '',
     produto: '',
     nome: '',
     fabricacao: '',
@@ -64,7 +77,7 @@ export class ApiMock {
   }];
 
   static getProduto = {
-    código: '',
+    codigo: '',
     produto: '',
     nome: '',
     fabricacao: '',

@@ -3,11 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  template: ''
 })
-export class HeaderComponent implements OnInit {
+export abstract class BasePageComponent implements OnInit {
   eUrlPageEnum = UrlPageEnum;
 
   constructor(
@@ -20,4 +18,5 @@ export class HeaderComponent implements OnInit {
   gotoPage( page: string ){
     this.router.navigate([page]);
   }
+
 }
